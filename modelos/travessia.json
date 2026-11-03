@@ -1,0 +1,368 @@
+{
+  "id": "travessia",
+  "nome": "Travessia",
+  "icone": "🗼",
+  "descricao": "Autorização/comunicação de travessia de rede de distribuição sobre ou sob empreendimento de terceiros.",
+  "titulo_documento": "TERMO DE AUTORIZAÇÃO DE TRAVESSIA DE REDE DE DISTRIBUIÇÃO",
+  "subtitulo": "Documento emitido em conformidade com as Normas Técnicas da CEMIG e a ABNT NBR 15688.",
+  "campos": [
+    {
+      "chave": "protocolo",
+      "rotulo": "Nº do protocolo / processo",
+      "tipo": "texto",
+      "grupo": "Controle",
+      "placeholder": "Ex.: 2026.001.12345",
+      "dica": "Se ficar em branco, o campo é omitido do documento."
+    },
+    {
+      "chave": "data_documento",
+      "rotulo": "Data do documento",
+      "tipo": "data",
+      "grupo": "Controle",
+      "obrigatorio": true
+    },
+    {
+      "chave": "interessado_nome",
+      "rotulo": "Nome do interessado",
+      "tipo": "texto",
+      "grupo": "Interessado",
+      "obrigatorio": true,
+      "placeholder": "Pessoa física ou razão social",
+      "largo": true
+    },
+    {
+      "chave": "interessado_documento",
+      "rotulo": "CPF / CNPJ do interessado",
+      "tipo": "documento",
+      "grupo": "Interessado",
+      "obrigatorio": true,
+      "placeholder": "000.000.000-00 ou 00.000.000/0000-00"
+    },
+    {
+      "chave": "interessado_telefone",
+      "rotulo": "Telefone",
+      "tipo": "telefone",
+      "grupo": "Interessado",
+      "placeholder": "(00) 00000-0000"
+    },
+    {
+      "chave": "interessado_email",
+      "rotulo": "E-mail",
+      "tipo": "email",
+      "grupo": "Interessado",
+      "placeholder": "nome@dominio.com.br"
+    },
+    {
+      "chave": "procurador_nome",
+      "rotulo": "Procurador / representante legal",
+      "tipo": "texto",
+      "grupo": "Interessado",
+      "largo": true
+    },
+    {
+      "chave": "procurador_documento",
+      "rotulo": "CPF / CNPJ do procurador",
+      "tipo": "documento",
+      "grupo": "Interessado",
+      "dica": "Preencha o procurador se houver representação por procuração."
+    },
+    {
+      "chave": "empreendimento",
+      "rotulo": "Nome do empreendimento",
+      "tipo": "texto",
+      "grupo": "Empreendimento",
+      "obrigatorio": true,
+      "largo": true,
+      "placeholder": "Ex.: Fazenda Boa Esperança — Talhão 3"
+    },
+    {
+      "chave": "municipio",
+      "rotulo": "Município",
+      "tipo": "texto",
+      "grupo": "Empreendimento",
+      "obrigatorio": true
+    },
+    {
+      "chave": "uf",
+      "rotulo": "UF",
+      "tipo": "selecao",
+      "grupo": "Empreendimento",
+      "obrigatorio": true,
+      "opcoes": ["MG"],
+      "padrao": "MG"
+    },
+    {
+      "chave": "endereco",
+      "rotulo": "Endereço / referência de localização",
+      "tipo": "texto",
+      "grupo": "Empreendimento",
+      "largo": true,
+      "placeholder": "Rodovia, km, estrada de acesso, ponto de referência"
+    },
+    {
+      "chave": "coordenadas",
+      "rotulo": "Coordenadas geográficas",
+      "tipo": "texto",
+      "grupo": "Empreendimento",
+      "placeholder": "-21,5555 / -45,4343 (datum SIRGAS 2000)"
+    },
+    {
+      "chave": "tipo_travessia",
+      "rotulo": "Tipo de travessia",
+      "tipo": "selecao",
+      "grupo": "Travessia",
+      "obrigatorio": true,
+      "opcoes": [
+        "Rede de distribuição aérea",
+        "Rede de distribuição subterrânea",
+        "Rede de transmissão",
+        "Ramal de ligação"
+      ],
+      "padrao": "Rede de distribuição aérea"
+    },
+    {
+      "chave": "tensao_kv",
+      "rotulo": "Tensão nominal (kV)",
+      "tipo": "numero",
+      "grupo": "Travessia",
+      "obrigatorio": true,
+      "placeholder": "13,8",
+      "dica": "Use vírgula ou ponto como separador decimal."
+    },
+    {
+      "chave": "extensao_m",
+      "rotulo": "Extensão da travessia (m)",
+      "tipo": "numero",
+      "grupo": "Travessia",
+      "obrigatorio": true,
+      "placeholder": "180"
+    },
+    {
+      "chave": "vao_m",
+      "rotulo": "Vão entre estruturas (m)",
+      "tipo": "numero",
+      "grupo": "Travessia",
+      "placeholder": "60"
+    },
+    {
+      "chave": "postes",
+      "rotulo": "Quantidade de estruturas / postes",
+      "tipo": "numero",
+      "grupo": "Travessia",
+      "placeholder": "4"
+    },
+    {
+      "chave": "tipo_estrutura",
+      "rotulo": "Tipo de estrutura",
+      "tipo": "selecao",
+      "grupo": "Travessia",
+      "opcoes": [
+        "Concreto — seção circular",
+        "Concreto — seção retangular",
+        "Madeira tratada",
+        "Metálica",
+        "Não se aplica"
+      ]
+    },
+    {
+      "chave": "altura_livre",
+      "rotulo": "Altura livre mínima do solo (m)",
+      "tipo": "numero",
+      "grupo": "Travessia",
+      "placeholder": "6,5"
+    },
+    {
+      "chave": "data_inicio",
+      "rotulo": "Data prevista de início",
+      "tipo": "data",
+      "grupo": "Prazos",
+      "obrigatorio": true
+    },
+    {
+      "chave": "data_conclusao",
+      "rotulo": "Data prevista de conclusão",
+      "tipo": "data",
+      "grupo": "Prazos",
+      "obrigatorio": true
+    },
+    {
+      "chave": "prazo_dias",
+      "rotulo": "Prazo de execução (dias)",
+      "tipo": "numero",
+      "grupo": "Prazos",
+      "calculado": "dias_entre",
+      "origem": ["data_inicio", "data_conclusao"],
+      "dica": "Calculado automaticamente a partir das datas; pode ser sobrescrito."
+    },
+    {
+      "chave": "responsavel_nome",
+      "rotulo": "Responsável técnico",
+      "tipo": "texto",
+      "grupo": "Responsabilidade técnica",
+      "obrigatorio": true,
+      "largo": true
+    },
+    {
+      "chave": "responsavel_registro",
+      "rotulo": "Registro CREA / CFT",
+      "tipo": "texto",
+      "grupo": "Responsabilidade técnica",
+      "obrigatorio": true,
+      "placeholder": "CREA-MG 000000/D"
+    },
+    {
+      "chave": "art_numero",
+      "rotulo": "Nº da ART / RRT",
+      "tipo": "texto",
+      "grupo": "Responsabilidade técnica",
+      "placeholder": "000000000000000"
+    },
+    {
+      "chave": "observacoes",
+      "rotulo": "Observações / condicionantes adicionais",
+      "tipo": "area",
+      "grupo": "Complementos",
+      "largo": true,
+      "dica": "Cada linha digitada vira um item da seção de observações."
+    }
+  ],
+  "secoes": [
+    {
+      "titulo": "1. IDENTIFICAÇÃO DO INTERESSADO",
+      "blocos": [
+        {
+          "tipo": "tabela_campos",
+          "campos": [
+            "interessado_nome",
+            "interessado_documento",
+            "interessado_telefone",
+            "interessado_email",
+            "procurador_nome",
+            "procurador_documento"
+          ]
+        }
+      ]
+    },
+    {
+      "titulo": "2. IDENTIFICAÇÃO DO EMPREENDIMENTO",
+      "blocos": [
+        {
+          "tipo": "tabela_campos",
+          "campos": [
+            "empreendimento",
+            "endereco",
+            "municipio",
+            "coordenadas",
+            "protocolo"
+          ]
+        }
+      ]
+    },
+    {
+      "titulo": "3. CARACTERÍSTICAS DA TRAVESSIA",
+      "blocos": [
+        {
+          "tipo": "tabela_campos",
+          "campos": [
+            "tipo_travessia",
+            "tensao_kv",
+            "extensao_m",
+            "vao_m",
+            "postes",
+            "tipo_estrutura",
+            "altura_livre",
+            "data_inicio",
+            "data_conclusao",
+            "prazo_dias"
+          ]
+        }
+      ]
+    },
+    {
+      "titulo": "4. DAS CONDIÇÕES DA AUTORIZAÇÃO",
+      "blocos": [
+        {
+          "tipo": "clausula",
+          "titulo": "CLÁUSULA PRIMEIRA — DO OBJETO",
+          "texto": "A CEMIG — Companhia Energética de Minas Gerais autoriza {{interessado_nome}}, inscrito(a) no CPF/CNPJ sob nº {{interessado_documento|cpfcnpj}}, a executar e manter {{tipo_travessia|minusculo}} com tensão nominal de {{tensao_kv|numero}} kV, com extensão de {{extensao_m|numero}} m, no empreendimento {{empreendimento}}, situado no município de {{municipio}}/{{uf}}, nas condições técnicas estabelecidas neste Termo e no projeto técnico aprovado."
+        },
+        {
+          "tipo": "clausula",
+          "titulo": "CLÁUSULA SEGUNDA — DAS CONDIÇÕES TÉCNICAS",
+          "texto": "A travessia deverá observar a altura livre mínima de {{altura_livre|numero}} m em relação ao solo, os afastamentos regulamentares e as prescrições da ABNT NBR 15688 e das Normas de Distribuição da CEMIG, sendo vedada qualquer edificação, depósito de material ou cultivo de espécie de porte elevado sob a faixa de segurança da rede."
+        },
+        {
+          "tipo": "clausula",
+          "titulo": "CLÁUSULA TERCEIRA — DAS OBRIGAÇÕES DO INTERESSADO",
+          "texto": "O interessado obriga-se a:"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "manter permanentemente livre a faixa de segurança da rede, inclusive quanto à supressão de vegetação que implique risco de contato com os condutores;",
+            "executar os serviços por profissional legalmente habilitado, com observância das normas de segurança do trabalho, em especial a NR-10;",
+            "comunicar previamente à CEMIG qualquer alteração de projeto, ampliação do empreendimento ou intervenção que afete a faixa de segurança;",
+            "responsabilizar-se integralmente por danos materiais, pessoais ou ambientais decorrentes da execução ou da manutenção da travessia;",
+            "permitir o acesso das equipes da CEMIG à faixa de servidão para inspeção, manutenção e emergências, mediante comunicação prévia, salvo em situação de risco iminente."
+          ]
+        },
+        {
+          "tipo": "clausula",
+          "titulo": "CLÁUSULA QUARTA — DO PRAZO",
+          "texto": "A execução da travessia deverá ocorrer no período de {{data_inicio|data}} a {{data_conclusao|data}}, correspondente a {{prazo_dias|numero}} dias. A prorrogação deverá ser requerida antes do término do prazo, com justificativa técnica, sujeitando-se à análise da CEMIG."
+        },
+        {
+          "tipo": "clausula",
+          "titulo": "CLÁUSULA QUINTA — DA VALIDADE E DA REVOGAÇÃO",
+          "texto": "Este Termo é válido enquanto perdurarem as condições técnicas que o fundamentaram, podendo ser revogado de pleno direito em caso de descumprimento das obrigações aqui previstas, de alteração das características da travessia ou de risco à segurança do sistema elétrico, sem prejuízo das demais medidas cabíveis."
+        },
+        {
+          "tipo": "clausula",
+          "titulo": "CLÁUSULA SEXTA — DAS DISPOSIÇÕES FINAIS",
+          "texto": "Este Termo não dispensa o interessado do cumprimento das demais exigências legais, ambientais e municipais aplicáveis ao empreendimento, nem transfere à CEMIG qualquer responsabilidade sobre a atividade desenvolvida na área."
+        },
+        {
+          "tipo": "condicional",
+          "campo": "observacoes",
+          "titulo": "4.1 OBSERVAÇÕES E CONDICIONANTES ADICIONAIS",
+          "blocos": [
+            { "tipo": "lista_campo", "campo": "observacoes" }
+          ]
+        }
+      ]
+    },
+    {
+      "titulo": "5. RESPONSABILIDADE TÉCNICA",
+      "blocos": [
+        {
+          "tipo": "tabela_campos",
+          "campos": ["responsavel_nome", "responsavel_registro", "art_numero"]
+        }
+      ]
+    },
+    {
+      "titulo": "6. DOCUMENTOS PARTES DESTE TERMO",
+      "blocos": [
+        {
+          "tipo": "p",
+          "texto": "Integram este Termo, para todos os efeitos, os seguintes documentos:"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "projeto técnico da travessia, devidamente assinado pelo responsável técnico;",
+            "Anotação de Responsabilidade Técnica — ART/RRT{{?art_numero}} nº {{art_numero}}{{/art_numero}};",
+            "documento de identificação e procuração, quando for o caso;",
+            "comprovante de propriedade, posse ou anuência do titular da área."
+          ]
+        }
+      ]
+    }
+  ],
+  "encerramento": "E, por estarem de acordo, firmam o presente Termo, elaborado em via única para todos os efeitos legais.",
+  "assinaturas": [
+    { "papel": "Responsável Técnico", "nome": "{{responsavel_nome}}", "linha2": "{{responsavel_registro}}" },
+    { "papel": "CEMIG — Companhia Energética de Minas Gerais", "nome": "", "linha2": "Departamento de Gestão de Ativos de Distribuição" },
+    { "papel": "Interessado", "nome": "{{interessado_nome}}", "linha2": "CPF/CNPJ: {{interessado_documento|cpfcnpj}}" }
+  ]
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gerador de Documentos — CEMIG</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='estilo.css') }}">
+</head>
+<body>
+  <header class="topo">
+    <div>
+      <div class="marca">
+        <div class="logo">CEMIG<span>Companhia Energética de Minas Gerais</span></div>
+      </div>
+      <p>Gerador de documentos técnicos — selecione Travessia ou Desembargo, preencha e baixe em Word e PDF.</p>
+    </div>
+    <div class="selo">Uso interno</div>
+  </header>
+
+  <main class="layout">
+    <!-- -------------------------------------------------- formulário -->
+    <section class="cartao painel" aria-label="Formulário de geração">
+      <h2 class="titulo-painel">1. Tipo de documento</h2>
+      <div class="seletor-tipo" role="radiogroup" aria-label="Tipo de documento">
+        {% for modelo in modelos %}
+        <button type="button" class="opcao-tipo" role="radio" aria-checked="false"
+                data-modelo="{{ modelo.id }}">
+          <span class="emoji">{{ modelo.icone }}</span>
+          <strong>{{ modelo.nome }}</strong>
+          <small>{{ modelo.descricao }}</small>
+        </button>
+        {% endfor %}
+      </div>
+
+      <div id="aviso" class="aviso" role="status" aria-live="polite"></div>
+
+      <form id="formulario" novalidate>
+        <h2 class="titulo-painel">2. Dados do documento</h2>
+        <div id="campos-container">
+          <p class="vazio"><span class="emoji">👆</span>Escolha <strong>Travessia</strong> ou <strong>Desembargo</strong> para começar.</p>
+        </div>
+
+        <div class="acoes">
+          <button type="submit" class="botao principal" id="btn-word">⬇ Baixar Word (.docx)</button>
+          <button type="button" class="botao" id="btn-pdf">⬇ Baixar PDF</button>
+          <button type="button" class="botao secundario" id="btn-zip">📦 Word + PDF</button>
+          <button type="button" class="botao" id="btn-conferir">✓ Conferir dados</button>
+          <button type="button" class="botao" id="btn-limpar">✕ Limpar</button>
+        </div>
+      </form>
+
+      <details class="avancado">
+        <summary>Modo avançado — gerar vários documentos de uma vez</summary>
+        <p class="dica">
+          Cole uma lista JSON de registros do tipo selecionado. Cada registro gera um Word e um PDF
+          dentro de um arquivo .zip. Os nomes dos campos são os mesmos do formulário.
+        </p>
+        <textarea id="lote-json" spellcheck="false" placeholder='[
+  { "interessado_nome": "Maria", "municipio": "Varginha", "...": "..." },
+  { "interessado_nome": "João",  "municipio": "Três Corações", "...": "..." }
+]'></textarea>
+        <div class="acoes" style="border:0; padding-top:10px;">
+          <button type="button" class="botao secundario" id="btn-lote">📦 Gerar lote (.zip)</button>
+        </div>
+      </details>
+    </section>
+
+    <!-- -------------------------------------------------- prévia -->
+    <section class="cartao" aria-label="Pré-visualização">
+      <div class="previa-cabecalho">
+        <h2>Pré-visualização</h2>
+        <div class="controles">
+          <span id="status-previa" class="pill">nenhum modelo selecionado</span>
+          <button type="button" class="botao zoom" id="btn-zoom" title="Alternar zoom">🔍 100%</button>
+        </div>
+      </div>
+      <div class="previa-area" id="previa-area">
+        <div class="vazio">
+          <span class="emoji">📄</span>
+          A prévia do documento aparece aqui enquanto você preenche o formulário.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    window.MODELOS = {{ modelos | tojson }};
+    window.FERRAMENTAS = {{ ferramentas | tojson }};
+  </script>
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

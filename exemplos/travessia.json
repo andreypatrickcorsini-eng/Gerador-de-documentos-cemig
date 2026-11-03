@@ -1,0 +1,23 @@
+{
+  "protocolo": "2026.001.12345",
+  "data_documento": "2026-11-03",
+  "interessado_nome": "João da Silva",
+  "interessado_documento": "11144477735",
+  "interessado_telefone": "35999887766",
+  "interessado_email": "joao@exemplo.com.br",
+  "empreendimento": "Fazenda Boa Esperança — Talhão 3",
+  "municipio": "Varginha",
+  "uf": "MG",
+  "tipo_travessia": "Rede de distribuição aérea",
+  "tensao_kv": "13,8",
+  "extensao_m": "180",
+  "vao_m": "60",
+  "postes": "4",
+  "altura_livre": "6,5",
+  "data_inicio": "2026-11-10",
+  "data_conclusao": "2026-12-20",
+  "responsavel_nome": "Maria Souza",
+  "responsavel_registro": "CREA-MG 123456/D",
+  "art_numero": "000123456789",
+  "observacoes": "Manter sinalização noturna.\nComunicar interrupção programada."
+}

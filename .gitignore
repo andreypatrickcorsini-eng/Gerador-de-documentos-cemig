@@ -1,0 +1,21 @@
+# Ambiente virtual e caches
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Documentos gerados (não versionar dados de clientes)
+saida/
+*.docx
+*.pdf
+*.zip
+
+# Logos próprios (cada instalação usa o seu)
+assets/logo.png
+assets/logo.jpg
+assets/fonts/
+
+# Sistema
+.DS_Store
+Thumbs.db

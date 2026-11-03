@@ -1,0 +1,367 @@
+{
+  "id": "desembargo",
+  "nome": "Desembargo",
+  "icone": "🌱",
+  "descricao": "Requerimento de desembargo de área objeto de auto de embargo ambiental, com compromissos de recuperação.",
+  "titulo_documento": "REQUERIMENTO DE DESEMBARGO DE ÁREA",
+  "subtitulo": "Instruído nos termos da Lei nº 12.651/2012 e da legislação ambiental do Estado de Minas Gerais.",
+  "campos": [
+    {
+      "chave": "protocolo",
+      "rotulo": "Nº do protocolo / processo administrativo",
+      "tipo": "texto",
+      "grupo": "Controle",
+      "placeholder": "Ex.: 2026.002.98765"
+    },
+    {
+      "chave": "data_documento",
+      "rotulo": "Data do requerimento",
+      "tipo": "data",
+      "grupo": "Controle",
+      "obrigatorio": true
+    },
+    {
+      "chave": "orgao_destinatario",
+      "rotulo": "Órgão destinatário",
+      "tipo": "selecao",
+      "grupo": "Controle",
+      "obrigatorio": true,
+      "opcoes": [
+        "Secretaria de Estado de Meio Ambiente e Desenvolvimento Sustentável — SEMAD",
+        "Instituto Estadual de Florestas — IEF",
+        "Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais Renováveis — IBAMA",
+        "Secretaria Municipal de Meio Ambiente",
+        "Outro órgão licenciador"
+      ],
+      "padrao": "Secretaria de Estado de Meio Ambiente e Desenvolvimento Sustentável — SEMAD"
+    },
+    {
+      "chave": "interessado_nome",
+      "rotulo": "Nome do requerente / autuado",
+      "tipo": "texto",
+      "grupo": "Requerente",
+      "obrigatorio": true,
+      "largo": true,
+      "placeholder": "Pessoa física ou razão social"
+    },
+    {
+      "chave": "interessado_documento",
+      "rotulo": "CPF / CNPJ do requerente",
+      "tipo": "documento",
+      "grupo": "Requerente",
+      "obrigatorio": true
+    },
+    {
+      "chave": "interessado_telefone",
+      "rotulo": "Telefone",
+      "tipo": "telefone",
+      "grupo": "Requerente"
+    },
+    {
+      "chave": "interessado_email",
+      "rotulo": "E-mail",
+      "tipo": "email",
+      "grupo": "Requerente"
+    },
+    {
+      "chave": "procurador_nome",
+      "rotulo": "Procurador / representante legal",
+      "tipo": "texto",
+      "grupo": "Requerente",
+      "largo": true
+    },
+    {
+      "chave": "procurador_documento",
+      "rotulo": "CPF / CNPJ do procurador",
+      "tipo": "documento",
+      "grupo": "Requerente"
+    },
+    {
+      "chave": "empreendimento",
+      "rotulo": "Nome do empreendimento / imóvel",
+      "tipo": "texto",
+      "grupo": "Área embargada",
+      "obrigatorio": true,
+      "largo": true,
+      "placeholder": "Ex.: Fazenda Santa Rita — Matrícula 12.345"
+    },
+    {
+      "chave": "municipio",
+      "rotulo": "Município",
+      "tipo": "texto",
+      "grupo": "Área embargada",
+      "obrigatorio": true
+    },
+    {
+      "chave": "uf",
+      "rotulo": "UF",
+      "tipo": "selecao",
+      "grupo": "Área embargada",
+      "obrigatorio": true,
+      "opcoes": ["MG"],
+      "padrao": "MG"
+    },
+    {
+      "chave": "endereco",
+      "rotulo": "Localização / acesso",
+      "tipo": "texto",
+      "grupo": "Área embargada",
+      "largo": true
+    },
+    {
+      "chave": "coordenadas",
+      "rotulo": "Coordenadas geográficas",
+      "tipo": "texto",
+      "grupo": "Área embargada",
+      "placeholder": "-21,5555 / -45,4343 (datum SIRGAS 2000)"
+    },
+    {
+      "chave": "auto_embargo",
+      "rotulo": "Nº do auto de embargo / fiscalização",
+      "tipo": "texto",
+      "grupo": "Área embargada",
+      "obrigatorio": true,
+      "placeholder": "Ex.: AE 012345/2025"
+    },
+    {
+      "chave": "data_embargo",
+      "rotulo": "Data do embargo",
+      "tipo": "data",
+      "grupo": "Área embargada",
+      "obrigatorio": true
+    },
+    {
+      "chave": "area_m2",
+      "rotulo": "Área embargada (m²)",
+      "tipo": "numero",
+      "grupo": "Área embargada",
+      "obrigatorio": true,
+      "placeholder": "125000"
+    },
+    {
+      "chave": "area_ha",
+      "rotulo": "Área embargada (ha)",
+      "tipo": "numero",
+      "grupo": "Área embargada",
+      "calculado": "m2_para_ha",
+      "origem": ["area_m2"],
+      "dica": "Convertida automaticamente a partir dos metros quadrados."
+    },
+    {
+      "chave": "motivo_embargo",
+      "rotulo": "Motivo do embargo",
+      "tipo": "selecao",
+      "grupo": "Área embargada",
+      "obrigatorio": true,
+      "opcoes": [
+        "Supressão de vegetação sem autorização",
+        "Intervenção em Área de Preservação Permanente — APP",
+        "Intervenção em Reserva Legal",
+        "Obra ou atividade sem licença ambiental",
+        "Descumprimento de condicionante",
+        "Outro"
+      ],
+      "padrao": "Supressão de vegetação sem autorização"
+    },
+    {
+      "chave": "objeto_embargado",
+      "rotulo": "Objeto material do embargo",
+      "tipo": "selecao",
+      "grupo": "Área embargada",
+      "opcoes": [
+        "Área com vegetação suprimida",
+        "Cultivo agrícola",
+        "Pastagem",
+        "Edificação",
+        "Obra linear (faixa de servidão)",
+        "Pátio de materiais",
+        "Outro"
+      ]
+    },
+    {
+      "chave": "tipo_vegetacao",
+      "rotulo": "Fitofisionomia afetada",
+      "tipo": "selecao",
+      "grupo": "Área embargada",
+      "opcoes": [
+        "Floresta Estacional Semidecidual",
+        "Cerrado sentido restrito",
+        "Campo rupestre",
+        "Campo limpo / pastagem",
+        "Vegetação exótica / cultivo",
+        "Não se aplica"
+      ]
+    },
+    {
+      "chave": "prazo_recuperacao",
+      "rotulo": "Prazo proposto para recuperação (meses)",
+      "tipo": "numero",
+      "grupo": "Compromissos",
+      "padrao": "24"
+    },
+    {
+      "chave": "data_inicio_recuperacao",
+      "rotulo": "Início previsto da recuperação",
+      "tipo": "data",
+      "grupo": "Compromissos"
+    },
+    {
+      "chave": "prad_numero",
+      "rotulo": "Nº do PRAD / projeto de recuperação",
+      "tipo": "texto",
+      "grupo": "Compromissos",
+      "placeholder": "Se já protocolado"
+    },
+    {
+      "chave": "responsavel_nome",
+      "rotulo": "Responsável técnico",
+      "tipo": "texto",
+      "grupo": "Responsabilidade técnica",
+      "obrigatorio": true,
+      "largo": true
+    },
+    {
+      "chave": "responsavel_registro",
+      "rotulo": "Registro CREA / CFT / CRBio",
+      "tipo": "texto",
+      "grupo": "Responsabilidade técnica",
+      "obrigatorio": true
+    },
+    {
+      "chave": "art_numero",
+      "rotulo": "Nº da ART / RRT",
+      "tipo": "texto",
+      "grupo": "Responsabilidade técnica"
+    },
+    {
+      "chave": "observacoes",
+      "rotulo": "Observações / informações complementares",
+      "tipo": "area",
+      "grupo": "Complementos",
+      "largo": true
+    }
+  ],
+  "secoes": [
+    {
+      "titulo": "1. IDENTIFICAÇÃO DO REQUERENTE",
+      "blocos": [
+        {
+          "tipo": "tabela_campos",
+          "campos": [
+            "interessado_nome",
+            "interessado_documento",
+            "interessado_telefone",
+            "interessado_email",
+            "procurador_nome",
+            "procurador_documento"
+          ]
+        }
+      ]
+    },
+    {
+      "titulo": "2. IDENTIFICAÇÃO DA ÁREA EMBARGADA",
+      "blocos": [
+        {
+          "tipo": "tabela_campos",
+          "campos": [
+            "empreendimento",
+            "endereco",
+            "municipio",
+            "coordenadas",
+            "auto_embargo",
+            "data_embargo",
+            "area_m2",
+            "area_ha",
+            "motivo_embargo",
+            "objeto_embargado",
+            "tipo_vegetacao",
+            "protocolo"
+          ]
+        }
+      ]
+    },
+    {
+      "titulo": "3. DO REQUERIMENTO",
+      "blocos": [
+        {
+          "tipo": "p",
+          "texto": "Ao(À) {{orgao_destinatario}},"
+        },
+        {
+          "tipo": "clausula",
+          "titulo": "CLÁUSULA PRIMEIRA — DO OBJETO",
+          "texto": "{{interessado_nome}}, inscrito(a) no CPF/CNPJ sob nº {{interessado_documento|cpfcnpj}}, na qualidade de responsável pelo empreendimento {{empreendimento}}, localizado no município de {{municipio}}/{{uf}}, requer o DESEMBARGO da área de {{area_m2|numero}} m² ({{area_ha|numero}} ha), objeto do Auto de Embargo nº {{auto_embargo}}, lavrado em {{data_embargo|data}}, em razão de {{motivo_embargo|minusculo}}."
+        },
+        {
+          "tipo": "clausula",
+          "titulo": "CLÁUSULA SEGUNDA — DOS FATOS E FUNDAMENTOS",
+          "texto": "A área embargada encontra-se identificada no item 2 deste requerimento e delimitada na planta e no memorial descritivo anexos. O requerente reconhece a ocorrência descrita no auto de embargo e informa que as medidas de controle e recuperação ambiental estão descritas no Plano de Recuperação de Áreas Degradadas — PRAD{{?prad_numero}} nº {{prad_numero}}{{/prad_numero}} ou serão apresentadas no prazo assinalado por esse órgão, atendendo ao disposto na Lei nº 12.651/2012 e na legislação ambiental do Estado de Minas Gerais."
+        },
+        {
+          "tipo": "clausula",
+          "titulo": "CLÁUSULA TERCEIRA — DAS MEDIDAS DE CONTROLE E RECUPERAÇÃO",
+          "texto": "O requerente compromete-se a:"
+        },
+        {
+          "tipo": "lista",
+          "itens": [
+            "manter a área embargada isolada e sinalizada até a decisão definitiva sobre o desembargo;",
+            "executar o PRAD no prazo de {{prazo_recuperacao|numero}} meses{{?data_inicio_recuperacao}}, com início previsto em {{data_inicio_recuperacao|data}}{{/data_inicio_recuperacao}}, sob responsabilidade técnica de {{responsavel_nome}} ({{responsavel_registro}});",
+            "não suprimir vegetação nativa remanescente nem ampliar a intervenção na área objeto do embargo;",
+            "apresentar relatórios técnicos de acompanhamento semestrais, com registro fotográfico e indicadores de recuperação;",
+            "adotar as medidas de prevenção a incêndios e de proteção da fauna na área em recuperação."
+          ]
+        },
+        {
+          "tipo": "clausula",
+          "titulo": "CLÁUSULA QUARTA — DA DOCUMENTAÇÃO INSTRUTÓRIA",
+          "texto": "Acompanham este requerimento os documentos comprobatórios das medidas adotadas e da titularidade da área, conforme relação abaixo."
+        },
+        {
+          "tipo": "clausula",
+          "titulo": "CLÁUSULA QUINTA — DO PEDIDO",
+          "texto": "Diante do exposto, requer-se o recebimento e o processamento do presente requerimento, com o consequente desembargo da área identificada, bem como a suspensão das sanções administrativas acessórias enquanto perdurar a análise, nos termos da legislação aplicável."
+        },
+        {
+          "tipo": "condicional",
+          "campo": "observacoes",
+          "titulo": "3.1 INFORMAÇÕES COMPLEMENTARES",
+          "blocos": [
+            { "tipo": "lista_campo", "campo": "observacoes" }
+          ]
+        }
+      ]
+    },
+    {
+      "titulo": "4. RESPONSABILIDADE TÉCNICA",
+      "blocos": [
+        {
+          "tipo": "tabela_campos",
+          "campos": ["responsavel_nome", "responsavel_registro", "art_numero", "prad_numero"]
+        }
+      ]
+    },
+    {
+      "titulo": "5. DOCUMENTOS ANEXOS",
+      "blocos": [
+        {
+          "tipo": "lista",
+          "itens": [
+            "cópia do Auto de Embargo nº {{auto_embargo}} e da respectiva notificação;",
+            "Plano de Recuperação de Áreas Degradadas — PRAD e respectiva ART/RRT{{?art_numero}} nº {{art_numero}}{{/art_numero}};",
+            "planta e memorial descritivo da área embargada, com coordenadas georreferenciadas;",
+            "comprovante de titularidade, posse ou anuência do proprietário da área;",
+            "documento de identificação do requerente e procuração, quando for o caso;",
+            "relatório fotográfico da área na data do presente requerimento."
+          ]
+        }
+      ]
+    }
+  ],
+  "encerramento": "Nestes termos, o requerente pede deferimento.",
+  "fecho_local": "{{municipio}}/{{uf}}, {{data_documento|data_extenso}}.",
+  "assinaturas": [
+    { "papel": "Requerente", "nome": "{{interessado_nome}}", "linha2": "CPF/CNPJ: {{interessado_documento|cpfcnpj}}" },
+    { "papel": "Responsável Técnico", "nome": "{{responsavel_nome}}", "linha2": "{{responsavel_registro}}" }
+  ]
+}

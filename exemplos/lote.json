@@ -1,0 +1,33 @@
+{
+  "modelo": "desembargo",
+  "registros": [
+    {
+      "data_documento": "2026-11-03",
+      "interessado_nome": "Agropecuária Santa Rita Ltda.",
+      "interessado_documento": "11222333000181",
+      "empreendimento": "Fazenda Santa Rita",
+      "municipio": "Três Corações",
+      "uf": "MG",
+      "auto_embargo": "AE 012345/2025",
+      "data_embargo": "2025-08-14",
+      "area_m2": "125000",
+      "motivo_embargo": "Intervenção em Área de Preservação Permanente — APP",
+      "responsavel_nome": "Carlos Pereira",
+      "responsavel_registro": "CREA-MG 654321/D"
+    },
+    {
+      "data_documento": "2026-11-03",
+      "interessado_nome": "Agropecuária Santa Rita Ltda.",
+      "interessado_documento": "11222333000181",
+      "empreendimento": "Fazenda Boa Vista",
+      "municipio": "Três Corações",
+      "uf": "MG",
+      "auto_embargo": "AE 067890/2025",
+      "data_embargo": "2025-08-14",
+      "area_m2": "48200",
+      "motivo_embargo": "Intervenção em Área de Preservação Permanente — APP",
+      "responsavel_nome": "Carlos Pereira",
+      "responsavel_registro": "CREA-MG 654321/D"
+    }
+  ]
+}

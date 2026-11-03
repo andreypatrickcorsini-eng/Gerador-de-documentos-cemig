@@ -1,0 +1,20 @@
+Logo da instituição
+===================
+
+Sem nenhuma imagem nesta pasta, o cabeçalho dos documentos usa a marca
+tipográfica "CEMIG" (em azul) — o layout continua correto e pronto para uso.
+
+Para usar a logo oficial nos documentos gerados, salve o arquivo aqui como:
+
+    assets/logo.png      (preferencial, fundo transparente)
+    assets/logo.jpg
+
+A imagem entra automaticamente, no mesmo lugar, no Word (.docx) e no PDF,
+com altura de cerca de 1 cm, alinhada à esquerda do cabeçalho.
+
+Recomendações
+-------------
+- Proporção horizontal (ex.: 600 x 160 px) e fundo transparente.
+- Não é necessário editar código.
+- Arquivos de logo são ignorados pelo Git (.gitignore), para que cada
+  instalação use a sua própria versão.
